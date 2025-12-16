@@ -1,0 +1,27 @@
+.contact {
+  padding: 120px 100px;
+  background-color: #4b2bbf;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.text {
+  max-width: 500px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.info p {
+  margin-bottom: 12px;
+}
+
+.info a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}

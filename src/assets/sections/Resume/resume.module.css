@@ -1,0 +1,98 @@
+.resume {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+
+  padding: 120px 100px;
+  background-color: #4b2bbf;
+  color: #ffffff;
+  scroll-margin-top: 100px;
+}
+
+/* Títulos */
+.left h2,
+.right h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.left h2 {
+  text-transform: uppercase;
+}
+
+/* Itens */
+.item {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.item span {
+  font-weight: 600;
+  opacity: 0.8;
+  min-width: 90px;
+}
+
+.item p {
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.experienceTitle {
+  margin-top: 80px;
+}
+
+/* Skills */
+.right ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.right ul li {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.languages {
+  margin-top: 50px;
+}
+
+/* Linha divisória desktop */
+.resume::before {
+  content: "";
+  position: absolute;
+  left: 65%;
+  top: 120px;
+  bottom: 120px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .resume {
+    grid-template-columns: 1fr;
+    padding: 100px 20px;
+  }
+
+  .resume::before {
+    display: none;
+  }
+
+  .item {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .item span {
+    min-width: auto;
+  }
+
+  .left h2,
+  .right h2 {
+    font-size: 26px;
+  }
+}
