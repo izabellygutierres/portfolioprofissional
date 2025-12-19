@@ -57,23 +57,19 @@
 @media (max-width: 768px) {
   .menuButton {
     display: block;
-    z-index: 1100;
   }
 
   .nav {
-    position: fixed;
+    position: absolute;
     top: 70px;
-    left: 0;
+    right: 0;
     width: 100%;
     background-color: #4b2bbf;
-
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-
     padding: 20px 0;
-    z-index: 1000;
+    gap: 20px;
   }
 
   .open {
