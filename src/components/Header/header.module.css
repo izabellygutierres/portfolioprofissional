@@ -15,35 +15,57 @@
   padding: 0 20px;
 }
 
+/* LOGO */
 .logo {
   color: white;
   font-weight: bold;
   font-size: 20px;
 }
 
+/* NAV DESKTOP */
 .nav {
   display: flex;
   align-items: center;
+  gap: 30px;
 }
 
 .nav a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
   transition: color 0.3s ease;
+  position: relative;
 }
 
+/* Hover */
 .nav a:hover {
   color: #cfcfcf;
 }
 
+/* Linha animada embaixo */
+.nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #cfcfcf;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.nav a:hover::after,
+.active::after {
+  width: 100%;
+}
+
+/* Link ativo */
 .active {
   color: #cfcfcf;
   font-weight: 500;
 }
 
+/* BOTÃO HAMBURGUER */
 .menuButton {
   display: none;
   background: none;
@@ -53,19 +75,23 @@
   cursor: pointer;
 }
 
-/* MOBILE */
+/* ===================== */
+/* ====== MOBILE ====== */
+/* ===================== */
+
 @media (max-width: 768px) {
   .menuButton {
     display: block;
   }
 
   .nav {
+    display: none;
     position: absolute;
     top: 70px;
     right: 0;
     width: 100%;
     background-color: #4b2bbf;
-    display: flex;
+
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
@@ -74,5 +100,9 @@
 
   .open {
     display: flex;
+  }
+
+  .nav a {
+    font-size: 16px;
   }
 }

@@ -22,8 +22,8 @@ export default function Hero() {
         </div>
 
         <div className={styles.buttons}>
-          <button>Repository</button>
-          <button>Behance</button>
+          <button onClick={ () => window.open("https://github.com/izabellygutierres")}>Repository</button>
+          <button onClick={ () => window.open("https://www.behance.net/izabellygutierres")}>Behance</button>        
         </div>
       </motion.div>
 
@@ -36,7 +36,7 @@ export default function Hero() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       >
 
-        <img src="/src/assets/images/perfil.jpg" alt="Izabelly" />
+        <img src="/src/assets/images/heropg.png" alt="Izabelly" />
       </motion.div>
 
     </section>
